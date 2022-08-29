@@ -5,7 +5,7 @@ const commentSchema = new mongoose.Schema({
     body: {type: String, required: true},
     video: {
         type: mongoose.Types.ObjectId,
-        ref: Video
+        ref: 'Video'
     }
 }, {timestamps: true})
 
@@ -13,4 +13,3 @@ const Comment = mongoose.model('Comment', commentSchema)
 
 module.exports = Comment
 
-console.log(Comment)
