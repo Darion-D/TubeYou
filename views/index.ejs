@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head -->
+	<%- include( 'partials/head.ejs', { page: 'Products' } ) %> 
+    <body>  
+		<%- include( 'partials/nav.ejs' )  %>
+
+        <section>
+            <div>
+                <h2 class="title">All Videos</h2>
+            </div>
+        </section>
+
+        <main class="container">
+            <div>
+                <% for( let i = 0; i<products.length; i++){ %>
+                    <% const firstProduct = products[i] %>
+                    <!-- < % for JS behind the scenes - need run JS => < % % > -->
+                    <a href="/products/<%= firstProduct._id %>"><%= firstProduct.name %></a> 
+                <% } %> 
+            </div>
+        </main>
+    
+	</body>
+</html>
