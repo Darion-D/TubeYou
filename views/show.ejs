@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+<%- include( 'partials/head.ejs' )  %>
+
+<body>
+    <%- include( 'partials/nav.ejs' )  %>
+
+    <section>
+        <div>
+            <h2 class="title">Product: <%=product.name%>
+            </h2>
+
+        </div>
+    </section>
+
+    <main class="container">
+        <div>
+            
+            <small>price: $<%= product.price %></small>
+
+            <div>
+                <a href="/products/<%=id%>/edit">Edit Product</a>
+            </div>
+          
+            <div>
+                <p class="control">
+                    <form action="/products/<%= id %>?_method=DELETE" method="POST">
+                            <input class="button is-danger" type="submit" value="Delete Product"/>                    
+                    </form>
+                </p>
+
+            </div>
+            <img src="<%=product.image%>" style="max-width: 500px;" />
+        </div>
+    </main>
+
+</body>
+
+</html>
