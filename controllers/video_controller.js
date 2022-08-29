@@ -33,6 +33,16 @@ router.get(`/:id`, async (req, res) => {
         console.log(error)
     }
 
-
     
+});
+
+router.post(`/`, async (req, res) => {
+    try {
+        
+        const newVideo = db.Video.create(req.body);
+
+        res.redirect(`/`);
+    } catch (error) {
+        console.log(error);
+    }
 })
