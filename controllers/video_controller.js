@@ -41,8 +41,10 @@ router.post(`/`, async (req, res) => {
         
         const newVideo = db.Video.create(req.body);
 
-        res.redirect(`/`);
+        res.redirect(`/`);     
     } catch (error) {
         console.log(error);
     }
-})
+});
+
+module.exports = router;
