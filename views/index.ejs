@@ -13,12 +13,13 @@
 
         <main class="container">
             <div>
-                <% for( let i = 0; i<products.length; i++){ %>
-                    <% const firstProduct = products[i] %>
+                <% for( let i = 0; i<videos.length; i++){ %>
+                    <% const firstVideo = videos[i] %>
                     <!-- < % for JS behind the scenes - need run JS => < % % > -->
-                    <a href="/products/<%= firstProduct._id %>"><%= firstProduct.name %></a> 
+                    <a href="/videos/<%= firstVideo._id %>"><%= firstVideo.title %></a> 
                 <% } %> 
             </div>
+            
         </main>
     
 	</body>

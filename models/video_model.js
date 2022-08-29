@@ -3,7 +3,8 @@ const videos = [
         url:"https://www.youtube.com/embed/SXxEEtDhXks",
         title: 'Synthwave / Spacewave Music Productivity',
         uploader: 'Josh Sparks'
-    },
+    }    
+    ,
     {
         url: "https://www.youtube.com/embed/q9vdHoxuaQc",
         title: 'The Grand Tour Presents: A Scandi Flick',
@@ -30,6 +31,6 @@ async function reloadData() {
 	}
 }
 
-reloadData();
+// reloadData();
 
 module.exports = videos
