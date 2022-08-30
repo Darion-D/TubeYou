@@ -13,26 +13,36 @@
             <div>
                 <form action="/videos" method="POST">
                     <div>
-                        <label for="name">Video Name</label>
+                        <label for="url">Video URL:</label>
                         <input
                           type="text"
-                          placeholder="Super Cool Video"
-                          name="name"
-                          id="name"
+                          placeholder="Video URL"
+                          name="url"
+                          id="url"
                         />
                     </div>
                     <div>
-                        <label for="description">Video Description</label>
+                        <label for="description">Video Description:</label>
                         <input type="text" placeholder="Description Here" name="Description" />
                     </div>
                     <div>
-                        <label for="image">Video Thumbnail</label>
+                        <label for="title">Video Title:</label>
                         <input 
                           class="input"
                           type="text"
-                          placeholder="http://"
-                          name="thumbnail"
-                          id="thumbnail"
+                          placeholder="title"
+                          name="title"
+                          id="title"
+                          />
+                    </div>
+                    <div>
+                    <label for="uploader">Uploader:</label>
+                        <input 
+                          class="input"
+                          type="text"
+                          placeholder="uploader"
+                          name="uploader"
+                          id="uploader"
                           />
                     </div>
                     <button class="button is-info">Create Video</button>

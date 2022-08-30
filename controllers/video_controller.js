@@ -57,7 +57,7 @@ router.post(`/`, async (req, res) => {
         
         const newVideo = await db.Video.create(req.body);
 
-        res.redirect(`/`);     
+        res.redirect(`/videos`);     
     } catch (error) {
         console.log(error);
     }

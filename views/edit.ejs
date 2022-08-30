@@ -7,25 +7,45 @@
 
     
 <form action="/videos/<%= id%>?_method=PUT" method="POST">
-    <label>Video</label>
+    <label>Video URL:</label>
     <div>
         <input
           class="input"
           type="text"
-          placeholder="video name"
-          name="name"
-          value="<%= video.name %> "
+          placeholder="video url"
+          name="url"
+          value="<%= video.url %> "
           />
     </div>
 <div>
-    <label>Video Image</label>
+    <label>Video Title:</label>
     <div class="control">
         <input
           class="input"
           type="text"
-          placeholder="video image"
-          name="image"
-          value="<%= video.image %> "
+          placeholder="video title"
+          name="title"
+          value="<%= video.title %> "
+          />
+    </div>
+    <label>Uploader:</label>
+    <div class="control">
+        <input
+          class="input"
+          type="text"
+          placeholder="uploader"
+          name="uploader"
+          value="<%= video.uploader %> "
+          />
+    </div>
+    <label>Video Description:</label>
+    <div class="control">
+        <input
+          class="input"
+          type="text"
+          placeholder="video description"
+          name="description"
+          value="<%= video.description %> "
           />
     </div>
 </div>
