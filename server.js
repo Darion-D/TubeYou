@@ -17,6 +17,10 @@ app.use(methodOverride(`_method`));
 
 app.use(`/videos`, videoController);
 
+app.get(`/`, (req, res) => {
+    res.redirect(`/videos`);
+});
+
 
 
 app.listen(PORT, () => {
