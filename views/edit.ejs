@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head", {page: "edit"}) %>
+
+    <body>
+        <%- include("partials/nav") %>
+
+    
+<form action="/videos/<%= id%>?_method=PUT" method="POST">
+    <label>Video</label>
+    <div>
+        <input
+          class="input"
+          type="text"
+          placeholder="video name"
+          name="name"
+          value="<%= video.name %> "
+          />
+    </div>
+<div>
+    <label>Video Image</label>
+    <div class="control">
+        <input
+          class="input"
+          type="text"
+          placeholder="video image"
+          name="image"
+          value="<%= video.image %> "
+          />
+    </div>
+</div>
+
+    <div>
+  <input type="submit" value="Edit Video">      
+    </div>
+</form>
+</body>
+</html>
