@@ -18,33 +18,7 @@
             <main class="container">
                 <div>
 
-
                     <div id="edit">
-                        <a href="/videos/<%=id%>/edit">Edit Videos</a>
-                    </div>
-                    <div>
-                        <iframe width="750" height="620" src="<%=video.url%>">
-                        </iframe>
-                    </div>
-                    <div id="upload">
-                        <p>
-                          Uploaded by: <%=video.uploader%> 
-                        </p>
-                    </div>
-                    <div id="description">
-                        <p>
-                            <%=video.description%>
-                        </p>
-                    </div>
-                    <div id="comments">
-                        <p>
-                            Comments: Site Circa 1995
-                        </p>
-                    </div>
-
-                    
-
-                    <div>
                         <a href="/videos/<%=id%>/edit">Edit Videos</a>
                     </div>
                     <div>
@@ -55,9 +29,8 @@
                         <% for( let i = 0; i<comments.length; i++){ %>
                             <p><%=comments[i].body%></p>
                         <%}%>
-
-
-                    </div>    
+                            
+                    </div>
                     <div>
                         <p class="control">
                         <form action="/videos/<%= id %>?_method=DELETE" method="POST">
