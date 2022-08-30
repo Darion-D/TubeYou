@@ -21,6 +21,10 @@ router.get(`/`, async (req, res) => {
     
 });
 
+router.get(`/new`, (req, res) => {
+    res.render(`new.ejs`);
+});
+
 router.get(`/:id`, async (req, res) => {
 
     try {
