@@ -7,8 +7,8 @@
 
     
 <form action="/videos/<%= id%>?_method=PUT" method="POST">
-    <label>Video URL:</label>
     <div>
+    <label id="urlLabel">Video URL:</label>
         <input
           class="input"
           type="text"
@@ -18,7 +18,7 @@
           />
     </div>
 <div>
-    <label>Video Title:</label>
+    <label id="titleLabel">Video Title:</label>
     <div class="control">
         <input
           class="input"
@@ -28,7 +28,7 @@
           value="<%= video.title %> "
           />
     </div>
-    <label>Uploader:</label>
+    <label id="uploadLabel">Uploader:</label>
     <div class="control">
         <input
           class="input"
@@ -38,7 +38,7 @@
           value="<%= video.uploader %> "
           />
     </div>
-    <label>Video Description:</label>
+    <label id="descriptionLabel">Video Description:</label>
     <div class="control">
         <input
           class="input"
@@ -50,7 +50,7 @@
     </div>
 </div>
 
-    <div>
+    <div id="input">
   <input type="submit" value="Edit Video">      
     </div>
 </form>
