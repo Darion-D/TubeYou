@@ -36,6 +36,18 @@ router.get(`/:id`, async (req, res) => {
     
 });
 
+router.get(`/:id/edit`, async (req, res) => {
+
+    try {
+        const foundVideo = await db.Video.findById(req.params.id);
+
+        res.render(`edit.ejs`, { video: foundVideo, id: foundVideo._id });
+        
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 router.post(`/`, async (req, res) => {
     try {
         
@@ -46,5 +58,17 @@ router.post(`/`, async (req, res) => {
         console.log(error);
     }
 });
+
+router.put(`/:id`, async (req, res) => {
+
+    try {
+
+        const updateData = req.body;
+        await db.Video.findByIdAndUpdate(req.params.id, updateData, {new: true});
+        
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 module.exports = router;
