@@ -55,7 +55,7 @@ router.get(`/:id/edit`, async (req, res) => {
 router.post(`/`, async (req, res) => {
     try {
         
-        const newVideo = db.Video.create(req.body);
+        const newVideo = await db.Video.create(req.body);
 
         res.redirect(`/`);     
     } catch (error) {
