@@ -4,7 +4,7 @@ const commentSchema = new mongoose.Schema({
     user: {type: String, required: true},
     body: {type: String, required: true},
     video: {
-        type: mongoose.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Video'
     }
 }, {timestamps: true})
