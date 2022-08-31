@@ -37,9 +37,24 @@
                     </div>
                     <div id="comments">
                         <p>
-                            Comments: Site Circa 1995
+                            Comments
                         </p>
                     </div>
+                    <div>
+                        <form method="POST" action="/videos">
+                            <input name="user" type="hidden" value="user1"/>
+                            <div>
+                                <textarea name="body">
+
+                                </textarea>
+                            </div>
+                            <input name="video" type="hidden" value="<%=id%>"/>
+                            <button type="submit">
+                                Submit Comment
+                            </button>
+                        </form>
+                    </div>
+                    
                     <div>
                         <% for( let i = 0; i<comments.length; i++){ %>
                             <p><%=comments[i].body%></p>
