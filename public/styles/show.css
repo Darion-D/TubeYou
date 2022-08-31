@@ -2,6 +2,8 @@ textarea {
     resize: none;
 }
 
-#comments {
-    margin: 3px;
+.container {
+    font-family: Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
 }
