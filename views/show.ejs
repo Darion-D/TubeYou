@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <link rel="stylesheet" href="/styles/show.css" /> 
 <!-- head -->
 <%- include( 'partials/head.ejs' ) %>
 
@@ -44,9 +44,7 @@
                         <form method="POST" action="/videos">
                             <input name="user" type="hidden" value="user1"/>
                             <div>
-                                <textarea name="body">
-
-                                </textarea>
+                                <textarea id="commentArea" name="body" rows="7" cols="40">Write comment here</textarea>
                             </div>
                             <input name="video" type="hidden" value="<%=id%>"/>
                             <button type="submit">
