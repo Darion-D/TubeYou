@@ -36,22 +36,8 @@
                             <%=video.description%>
                         </p>
                     </div>                    
-                    <div>
-                        <form method="POST" action="/videos/<%id%>">
-                            <input name="user" type="hidden" value="user1"/>
-                            <div>
-                                <div id="comments">
-                                         Comments
-                                </div>
-                                <textarea id="commentArea" name="body" rows="7" cols="40">Write comment here</textarea>
-                            </div>
-                            <input name="video" type="hidden" value="<%=id%>"/>
-                            <button type="submit">
-                                Submit Comment
-                            </button>
-                        </form>
-                    </div>
-                    </div>
+                </div>
+                <a href="/comments/new"><button type="button">Comment</button></a>
                     <div>
                         <% for( let i = 0; i<comments.length; i++){ %>
                             <p><%=comments[i].body%></p>
