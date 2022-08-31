@@ -10,14 +10,14 @@ const db = require('../models')
 
 
 
-router.get('/', async (req, res, next) => {
+router.get('/new', async (req, res, next) => {
 
     try {
         const allComments= await db.Comment.find().populate('video').exec()
         const allVideos = await db.Video.find()
 
         
-        res.render('comments/index.ejs', { comments: allComments, videos: allVideos })
+        res.render('comments/new.ejs', { comments: allComments, videos: allVideos })
     } catch (err) {
         console.log(err)
         next()
@@ -25,9 +25,9 @@ router.get('/', async (req, res, next) => {
 });
 
 
-router.get('/new', (req, res) => {
-    res.render('comments/new.ejs') 
-})
+// router.get('/new', (req, res) => {
+//     res.render('comments/new.ejs') 
+// })
 
 
 
@@ -45,19 +45,19 @@ router.get('/:id', async (req, res, next) => {
 
 
 router.get('/:id/edit', async (req, res, next) => {
-    res.render('comments/edit.ejs'); 
+    res.render('comments/edit.ejs');       
 })
 
 
 
-router.post('/', async (req, res, next) => {
+router.post('/new', async (req, res, next) => {
     try {
         const newComment = await db.Comment.create(req.body)
         res.redirect(`videos/` + newComment.video) // after creation take user to the review
 
     } catch (err) {
         console.log(err)
-        next() 
+        next()      
     }
 })
 
