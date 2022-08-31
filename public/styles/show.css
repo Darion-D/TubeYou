@@ -1,3 +1,7 @@
 textarea {
     resize: none;
 }
+
+#comments {
+    margin: 3px;
+}
