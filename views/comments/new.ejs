@@ -11,7 +11,11 @@
                 <div>
                     <textarea id="commentArea" name="body" rows="7" cols="40">Write comment here</textarea>
                 </div>
-                <input name="video" type="hidden" value=""/>
+                <select name="video">
+                    <% videos.forEach((video) => { %>
+                    <option value="<%=video._id%>"><%=video.title%></option>
+                <% }) %>
+                </select>
                 <button type="submit">
                     Submit Comment
                 </button>
