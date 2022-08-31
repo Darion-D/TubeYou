@@ -14,7 +14,7 @@ db.Comment.deleteMany({}, function (error, deletedComments){
             {
                 user: 'Yer Boi',
                 body: 'This banger hits yo!',
-                video: '630d161f2adf6d06b6ee07e3'
+                video: '630d161f2adf6d06b6ee07e3' 
             },
             {
                 user: 'Yer Boi',
