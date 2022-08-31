@@ -26,12 +26,12 @@ router.get('/', async (req, res, next) => {
 
 
 router.get('/new', (req, res) => {
-    res.send('new comment')
+    res.render('comments/new.ejs') 
 })
 
 
 
-router.get('/:id/', async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
     try {
         const foundComment = await db.Comment.findById(req.params.id).populate('video').exec()
         
@@ -45,7 +45,7 @@ router.get('/:id/', async (req, res, next) => {
 
 
 router.get('/:id/edit', async (req, res, next) => {
-    res.send('comment edit')
+    res.render('comments/edit.ejs'); 
 })
 
 
@@ -53,7 +53,7 @@ router.get('/:id/edit', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
     try {
         const newComment = await db.Comment.create(req.body)
-        res.redirect('/comments/' + newComment._id) // after creation take user to the review
+        res.redirect(`videos/` + newComment.video) // after creation take user to the review
 
     } catch (err) {
         console.log(err)
@@ -64,12 +64,12 @@ router.post('/', async (req, res, next) => {
 
 
 router.delete('/:id', async (req, res, next) => {
-    res.send('comment deleted')
+    res.redirect('/videos');
 })
 
 
 router.put('/:id', async (req, res, next) => {
-    res.send('comment updated')
+    res.send(`comment updated`)
 })
 
 module.exports = router
