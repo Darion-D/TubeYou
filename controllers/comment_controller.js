@@ -50,11 +50,11 @@ router.get('/:id/edit', async (req, res, next) => {
 
 
 
-router.post('/new', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
     try {
         const newComment = await db.Comment.create(req.body)
         res.redirect(`/videos/` + newComment.video) // after creation take user to the review
-
+        console.log(newComment)
     } catch (err) {
         console.log(err)
         next()      
