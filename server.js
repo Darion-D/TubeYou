@@ -23,6 +23,9 @@ app.get(`/`, (req, res) => {
     res.redirect(`/videos`);
 });
 
+app.route(`/*`).all((req, res) => {
+    res.render(`404`)
+})
 
 
 app.listen(PORT, () => {
