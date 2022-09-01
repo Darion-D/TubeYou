@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head -->
+    <%- include( "partials/head.ejs" ) %>
+    <body>
+        <%- include( "partials/nav.ejs" ) %>
+        <section>
+            <div>
+                <h1 class="title">New Video</h1>
+            </div>
+        </section>
+        <main class="container">
+            <div class="newVidInput">
+                <form action="/videos" method="POST">
+                    <div>
+                        <label for="url">Video URL:</label>
+                        <input
+                          type="text"
+                          placeholder="Video URL"
+                          name="url"
+                          id="url"
+                        />
+                    </div>
+                    <div>
+                        <label for="description">Video Description:</label>
+                        <input type="text" placeholder="Description Here" name="Description" />
+                    </div>
+                    <div>
+                        <label for="title">Video Title:</label>
+                        <input 
+                          class="input"
+                          type="text"
+                          placeholder="title"
+                          name="title"
+                          id="title"
+                          />
+                    </div>
+                    <div>
+                    <label for="uploader">Uploader:</label>
+                        <input 
+                          class="input"
+                          type="text"
+                          placeholder="uploader"
+                          name="uploader"
+                          id="uploader"
+                          />
+                    </div>
+                    <button class="button is-info">Create Video</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
