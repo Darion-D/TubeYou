@@ -17,20 +17,18 @@ const videos = [
     }
 ]
 
-const db = require('./index');
+const db = require('./index')
 
 async function reloadData() {
 	try {
-		let deleted = await db.Video.deleteMany({});
+		let deleted = await db.Video.deleteMany({})
 		console.log(deleted)
-		// console.log(deleted);
-		let reloading = await db.Video.insertMany(videos);
+		let reloading = await db.Video.insertMany(videos)
 		console.log(reloading)
 	} catch (err) {
-		console.log(err);
+		console.log(err)
 	}
 }
 
-// reloadData();
 
 module.exports = videos
