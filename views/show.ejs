@@ -37,12 +37,26 @@
                         </p>
                     </div>                    
                 </div>
-                <a href="/comments/new"><button type="button">Comment</button></a>
+                
                     <div>
                         <% for( let i = 0; i<comments.length; i++){ %>
                             <p><%=comments[i].body%></p>
                         <%}%>
                             
+                    </div>
+                    <div>
+                        <form method="POST" action="/comments/new">
+                            <input name="user" type="hidden" value="user1"/>
+                            <div>
+                                <textarea id="commentArea" name="body" rows="7" cols="40">Write comment here</textarea>
+                            </div>
+                            <select name="video">
+                                <option value="<%=video._id%>"><%=video.title%></option>
+                            </select>
+                            <button type="submit">
+                                Submit Comment
+                            </button>
+                        </form>
                     </div>
                     <div>
                         <p class="control">
