@@ -16,7 +16,8 @@ router.get(`/`, async (req, res) => {
     res.render(`index.ejs`, { videos: allVideos });
 
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.redirect(`/404`);
     }
     
 });
@@ -36,6 +37,7 @@ router.get(`/:id`, async (req, res) => {
         
     } catch (error) {
         console.log(error)
+        res.redirect(`/404`)
     }
 
     
@@ -50,6 +52,7 @@ router.get(`/:id/edit`, async (req, res) => {
         
     } catch (error) {
         console.log(error)
+        res.redirect(`/404`)
     }
 })
 
@@ -61,6 +64,7 @@ router.post(`/`, async (req, res) => {
         res.redirect(`/videos`);     
     } catch (error) {
         console.log(error);
+        res.redirect(`/404`);
     }
 });
 
@@ -75,6 +79,7 @@ router.put(`/:id`, async (req, res) => {
         
     } catch (error) {
         console.log(error);
+        res.redirect(`/404`)
     }
 });
 
@@ -86,7 +91,8 @@ router.delete(`/:id`, async (req, res) => {
         res.redirect(`/videos`);
         
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.redirect(`/404`);
     }
 })
 
