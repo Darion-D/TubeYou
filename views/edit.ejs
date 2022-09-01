@@ -5,7 +5,7 @@
     <body>
         <%- include("partials/nav") %>
 
-    
+<section id="edit">    
 <form action="/videos/<%= id%>?_method=PUT" method="POST">
     <div>
     <label id="urlLabel">Video URL:</label>
@@ -54,5 +54,6 @@
   <input type="submit" value="Edit Video">      
     </div>
 </form>
+</section>
 </body>
 </html>
