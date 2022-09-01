@@ -37,7 +37,6 @@ router.get(`/:id`, async (req, res) => {
 });
 
 router.get(`/:id/edit`, async (req, res) => {
-
     try {
         const foundVideo = await db.Video.findById(req.params.id);
         res.render(`edit.ejs`, { video: foundVideo, id: foundVideo._id });

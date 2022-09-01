@@ -10,7 +10,6 @@ const db = require('../models')
 
 
 router.get('/new', async (req, res, next) => {
-
     try {
         const allComments= await db.Comment.find().populate('video').exec()
         const allVideos = await db.Video.find()
