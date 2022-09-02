@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="stylesheet" href="/styles/edit.css" />
+
 <%- include("partials/head", {page: "edit" }) %>
 
   <body>
@@ -9,6 +11,8 @@
         <form action="/videos/<%= id%>?_method=PUT" method="POST">
           <div>
             <label id="urlLabel">Video URL:</label>
+          </div>
+          <div>
             <input class="input" type="text" placeholder="video url" name="url" value="<%= video.url %> " />
           </div>
           <div>
@@ -27,7 +31,7 @@
             </div>
           </div>
           <div id="input">
-            <input type="submit" value="Edit Video">
+            <input class="btn" type="submit" value="Edit Video">
           </div>
         </form>
       </section>
