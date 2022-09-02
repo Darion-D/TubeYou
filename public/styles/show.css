@@ -12,6 +12,9 @@ textarea {
     font-weight: bold;
 }
 
+#comment {
+    padding: 20px;
+}
 
 .comments {
     background-color: white;
