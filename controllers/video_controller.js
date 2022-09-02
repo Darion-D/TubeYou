@@ -26,7 +26,7 @@ router.get(`/:id`, async (req, res) => {
     try {
         const foundVideo = await db.Video.findById(req.params.id);
         const foundComments = await db.Comment.find({video: foundVideo._id})
-        console.log(foundComments)
+        // console.log(foundComments)
         res.render(`show.ejs`, { video: foundVideo, id: foundVideo._id, comments: foundComments } );
     } catch (error) {
         console.log(error)
