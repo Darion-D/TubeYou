@@ -8,7 +8,7 @@ const videoController = require(`./controllers/video_controller`);
 const commentController = require(`./controllers/comment_controller`);
 
 // App configuration
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 app.set(`view engine`, `ejs`);
 
@@ -28,6 +28,6 @@ app.route(`/*`).all((req, res) => {
 })
 
 
-app.listen(process.env.PORT || 4000, () => {
+app.listen(PORT, () => {
     console.log(`Listening for client on port ${PORT}`);
 });
