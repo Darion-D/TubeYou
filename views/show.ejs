@@ -40,11 +40,8 @@
                             <div>
                                 <textarea id="commentArea" name="body" rows="7" cols="40" placeholder="Write Comment Here..."></textarea>
                             </div>
-                            <select name="video">
-                                <option value="<%=video._id%>">
-                                    <%=video.title%>
-                                </option>
-                            </select>
+                            <input name="video" type="hidden" value="<%=video._id%>" />
+                           
                             <button type="submit">
                                 Submit Comment
                             </button>
