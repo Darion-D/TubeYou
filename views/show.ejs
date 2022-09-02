@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="/styles/show.css"/> 
-<!-- head -->
+<link rel="stylesheet" href="/styles/show.css" />
+
 <%- include( 'partials/head.ejs' ) %>
 
     <body>
         <%- include( 'partials/nav.ejs' ) %>
-
             <section>
                 <div>
                     <h2 class="title">Video: <%=video.name%>
                     </h2>
-
                 </div>
             </section>
-
             <main class="container">
                 <div>
-
                     <div>
                         <a href="/videos/<%=id%>/edit">Edit Videos</a>
                     </div>
@@ -25,33 +21,35 @@
                         <iframe width="420" height="315" src="<%=video.url%>">
                         </iframe>
                     </div>
-                <div class="text">
-                    <div id="upload">
-                        <p>
-                          Uploaded by: <%=video.uploader%> 
-                        </p>
+                    <div class="text">
+                        <div id="upload">
+                            <p>
+                                Uploaded by: <%=video.uploader%>
+                            </p>
+                        </div>
+                        <div id="description">
+                            <p>
+                                <%=video.description%>
+                            </p>
+                        </div>
                     </div>
-                    <div id="description">
-                        <p>
-                            <%=video.description%>
-                        </p>
-                    </div>                    
-                </div>
-                
-                    <div>
-                        <% for( let i = 0; i<comments.length; i++){ %>
-                            <p><%=comments[i].body%></p>
-                        <%}%>
-                            
+                    <div class="comments">
+                        <% for( let i=0; i<comments.length; i++){ %>
+                            <p>
+                                <%=comments[i].body%>
+                            </p>
+                            <%}%>
                     </div>
                     <div>
                         <form method="POST" action="/comments/new">
-                            <input name="user" type="hidden" value="user1"/>
+                            <input name="user" type="hidden" value="user1" />
                             <div>
                                 <textarea id="commentArea" name="body" rows="7" cols="40">Write comment here</textarea>
                             </div>
                             <select name="video">
-                                <option value="<%=video._id%>"><%=video.title%></option>
+                                <option value="<%=video._id%>">
+                                    <%=video.title%>
+                                </option>
                             </select>
                             <button type="submit">
                                 Submit Comment
@@ -64,11 +62,9 @@
                             <input class="button is-danger" type="submit" value="Delete Videos" />
                         </form>
                         </p>
-
                     </div>
                 </div>
             </main>
-
     </body>
 
 </html>

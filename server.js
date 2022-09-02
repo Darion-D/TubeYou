@@ -23,8 +23,11 @@ app.get(`/`, (req, res) => {
     res.redirect(`/videos`);
 });
 
+app.route(`/*`).all((req, res) => {
+    res.render(`404`)
+})
 
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log(`Listening for client on port ${PORT}`);
 });
