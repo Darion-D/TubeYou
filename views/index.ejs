@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-	<%- include( 'partials/head.ejs', { page: 'Products' } ) %> 
-    <body>  
-		<%- include( 'partials/nav.ejs' )  %>
+<link rel="stylesheet" href="/styles/index.css" />
 
-        <section>
-            <div>
-                <h2 class="title">All Videos</h2>
+<%- include( 'partials/head.ejs' , { page: 'Products' } ) %>
+
+    <body>
+        <%- include( 'partials/nav.ejs' ) %>
+
+            <section>
+                <div>
+                    <h2 class="title">All Videos</h2>
+                </div>
+            </section>
+            <div class="videos">
+                <% for( let i=0; i<videos.length; i++){ %>
+                    <% const firstVideo=videos[i] %>
+                        <a id="video" href="/videos/<%= firstVideo._id %>">
+                            <%= firstVideo.title %>
+                        </a>
+                        <% } %>
             </div>
-        </section>
-        <main class="container">
-            <div>
-                <% for( let i = 0; i<videos.length; i++){ %>
-                    <% const firstVideo = videos[i] %>
-                    <a href="/videos/<%= firstVideo._id %>"><%= firstVideo.title %></a> 
-                <% } %> 
-            </div>          
-        </main>  
-	</body>
+    </body>
+
 </html>
