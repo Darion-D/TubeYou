@@ -4,6 +4,13 @@ body {
     align-items: center;
 }
 
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
 label {
     font-size: 25px;
     text-shadow: 1px 1px 2px white;
@@ -26,11 +33,9 @@ input {
     border-radius: 10px;
 }
 
-#edit {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 40px;
 }
-
