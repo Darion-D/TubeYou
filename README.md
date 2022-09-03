@@ -5,7 +5,7 @@
 
 ## Screenshots
 
-![screenshot1](https://ibb.co/J7Y2r63)
+![screenshot1](https://i.ibb.co/HzcYGwh/Screen-Shot-2022-09-03-at-2-01-59-PM.png)
 
 ## Technologies Used
 
