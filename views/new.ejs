@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="/styles/new.css" />
 
 <%- include( "partials/head.ejs" ) %>
 
@@ -15,21 +16,29 @@
                     <form action="/videos" method="POST">
                         <div>
                             <label for="url">Video URL:</label>
-                            <input type="text" placeholder="Video URL" name="url" id="url" />
+                        </div>
+                        <div>
+                            <input class="input" type="text" placeholder="Video URL" name="url" id="url" />
                         </div>
                         <div>
                             <label for="description">Video Description:</label>
-                            <input type="text" placeholder="Description Here" name="Description" />
+                        </div>
+                        <div>
+                            <input class="input" type="text" placeholder="Description Here" name="Description" />
                         </div>
                         <div>
                             <label for="title">Video Title:</label>
+                        </div>
+                        <div>
                             <input class="input" type="text" placeholder="title" name="title" id="title" />
                         </div>
                         <div>
                             <label for="uploader">Uploader:</label>
+                        </div>
+                        <div>
                             <input class="input" type="text" placeholder="uploader" name="uploader" id="uploader" />
                         </div>
-                        <button class="button is-info">Create Video</button>
+                        <button class="btn">Create Video</button>
                     </form>
                 </div>
             </main>

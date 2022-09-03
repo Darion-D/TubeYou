@@ -1,3 +1,8 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
 textarea {
     resize: none;
 }
@@ -5,4 +10,12 @@ textarea {
 .container {
     font-family: Geneva, Verdana, sans-serif;
     font-weight: bold;
+}
+
+#comment {
+    padding: 20px;
+}
+
+.comments {
+    background-color: white;
 }

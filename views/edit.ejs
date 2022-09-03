@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="/styles/edit.css" />
+
 <%- include("partials/head", {page: "edit" }) %>
 
   <body>
@@ -9,27 +11,34 @@
         <form action="/videos/<%= id%>?_method=PUT" method="POST">
           <div>
             <label id="urlLabel">Video URL:</label>
+          </div>
+          <div>
             <input class="input" type="text" placeholder="video url" name="url" value="<%= video.url %> " />
           </div>
           <div>
             <label id="titleLabel">Video Title:</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="video title" name="title" value="<%= video.title %> " />
-            </div>
-            <label id="uploadLabel">Uploader:</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="uploader" name="uploader" value="<%= video.uploader %> " />
-            </div>
+          </div>
+          <div class="control">
+            <input class="input" type="text" placeholder="video title" name="title" value="<%= video.title %> " />
+          </div>
+          <div>
+          <label id="uploadLabel">Uploader:</label>
+          </div>
+          <div class="control">
+            <input class="input" type="text" placeholder="uploader" name="uploader" value="<%= video.uploader %> " />
+          </div>
+          <div>
             <label id="descriptionLabel">Video Description:</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="video description" name="description"
-                value="<%= video.description %> " />
-            </div>
+          </div>
+          <div class="control">
+            <input class="input" type="text" placeholder="video description" name="description"
+              value="<%= video.description %> " />
           </div>
           <div id="input">
-            <input type="submit" value="Edit Video">
+            <input class="btn" type="submit" value="Edit Video">
           </div>
         </form>
       </section>
   </body>
+
 </html>
