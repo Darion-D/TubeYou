@@ -6,6 +6,9 @@
 ## Screenshots
 
 ![screenshot1](https://i.ibb.co/HzcYGwh/Screen-Shot-2022-09-03-at-2-01-59-PM.png)
+![screenshot1](https://i.ibb.co/TwRpv7h/Screen-Shot-2022-09-03-at-2-01-36-PM.png)
+![screenshot1](https://i.ibb.co/8g8yQjR/Screen-Shot-2022-09-03-at-2-02-25-PM.png)
+![screenshot1](https://i.ibb.co/0yHgcs7/Screen-Shot-2022-09-03-at-2-02-46-PM.png)
 
 ## Technologies Used
 
