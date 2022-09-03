@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="/styles/edit.css" />
+<link rel="stylesheet" href="/styles/edit.css" />
 
 <%- include("partials/head", {page: "edit" }) %>
 
@@ -17,18 +17,22 @@
           </div>
           <div>
             <label id="titleLabel">Video Title:</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="video title" name="title" value="<%= video.title %> " />
-            </div>
-            <label id="uploadLabel">Uploader:</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="uploader" name="uploader" value="<%= video.uploader %> " />
-            </div>
+          </div>
+          <div class="control">
+            <input class="input" type="text" placeholder="video title" name="title" value="<%= video.title %> " />
+          </div>
+          <div>
+          <label id="uploadLabel">Uploader:</label>
+          </div>
+          <div class="control">
+            <input class="input" type="text" placeholder="uploader" name="uploader" value="<%= video.uploader %> " />
+          </div>
+          <div>
             <label id="descriptionLabel">Video Description:</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="video description" name="description"
-                value="<%= video.description %> " />
-            </div>
+          </div>
+          <div class="control">
+            <input class="input" type="text" placeholder="video description" name="description"
+              value="<%= video.description %> " />
           </div>
           <div id="input">
             <input class="btn" type="submit" value="Edit Video">
@@ -36,4 +40,5 @@
         </form>
       </section>
   </body>
+
 </html>

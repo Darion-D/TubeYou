@@ -14,8 +14,7 @@ router.get(`/`, async (req, res) => {
     } catch (error) {
         console.log(error);
         res.redirect(`/404`);
-    }
-    
+    } 
 });
 
 router.get(`/new`, (req, res) => {
