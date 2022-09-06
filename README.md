@@ -38,7 +38,7 @@
           <%=comments[i].body%>   /   <%=comments[i].createdAt%>
         </p>
                            
-2:     <input name="video" type="hidden" value="<%=video._id%>" />
+2:     input name="video" type="" value="<%=video._id%>"
 
 3:        #video {
        display: block;
